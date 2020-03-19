@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div id="app" class="container">
+    <nav class="navbar navbar-expand-sm bg-light">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link :to="{ name: 'Add' }" class="nav-link">Add Item</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link :to="{ name: 'List' }" class="nav-link">All Item</router-link>
+        </li>
+      </ul>
+    </nav>
+    <div class="gap">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
 <style lang="css">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.gap {
+  margin-top: 50px;
 }
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 </style>
