@@ -5,7 +5,7 @@
 <script>
 export default {
     components: {
-        name: 'ItemEdit'
+        name: 'Edit'
     }
 }
 </script>
